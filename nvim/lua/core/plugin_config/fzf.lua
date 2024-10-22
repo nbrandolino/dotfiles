@@ -1,0 +1,1 @@
+vim.go.fzf_preview_window = "['right,50%', 'ctrl-/']"
