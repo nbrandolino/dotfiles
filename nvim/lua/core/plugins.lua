@@ -21,9 +21,6 @@ return require('packer').startup(function(use)
   -- navigate tmux while in nvim
   use 'christoomey/vim-tmux-navigator'
 
-  -- fuzzyfinder
-  use 'junegunn/fzf'
-
   -- barbar git signs
   use 'lewis6991/gitsigns.nvim'
 
