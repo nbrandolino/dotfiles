@@ -5,9 +5,9 @@ VIMDEST = ~/.vimrc
 ZSHDEST = ~/.zshrc
 
 all:
-	@echo Run \'make install\' to install dotfiles.
+	@echo Run \'make desktop\' or \'make laptop\' to install dotfiles.
 
-install desktop:
+desktop:
 	# create destination dirs
 	@mkdir -p $(ALACRITTYDEST)
 	@mkdir -p $(NVIMDEST)
@@ -26,9 +26,9 @@ install desktop:
 	@git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 	@git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-    @sudo chsh -s /usr/bin/zsh $USER
+	@sudo chsh -s /usr/bin/zsh $USER
 
-install laptop:
+laptop:
 	# create destination dirs
 	@mkdir -p $(ALACRITTYDEST)
 	@mkdir -p $(NVIMDEST)
@@ -47,7 +47,7 @@ install laptop:
 	@git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 	@git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-    @sudo chsh -s /usr/bin/zsh $USER
+	@sudo chsh -s /usr/bin/zsh $USER
 
 uninstall:
 	@rm -rf $(ALACRITTYDEST)
