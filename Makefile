@@ -5,9 +5,9 @@ VIMDEST = ~/.vimrc
 ZSHDEST = ~/.zshrc
 
 all:
-	@echo Run \'make desktop\', \'make laptop\', \'make alacritty\', \'make nvim\', \'make tmux\', \'make vim\', or \'make zsh\' to install dotfiles.
+	@echo Run \'make install\', \'make alacritty\', \'make nvim\', \'make tmux\', \'make vim\', or \'make zsh\' to install dotfiles.
 
-desktop:
+install:
 	# create destination dirs
 	@mkdir -p $(ALACRITTYDEST)
 	@mkdir -p $(NVIMDEST)
