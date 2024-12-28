@@ -54,7 +54,7 @@ alacritty:
 	@mkdir -p $(ALACRITTYDEST)
 
 	# copy files
-	@cp -p ./alacritty/alacrittyLaptop.toml $(ALACRITTYDEST)alacritty.toml
+	@cp -p ./alacritty/alacrittyDesktop.toml $(ALACRITTYDEST)alacritty.toml
 
 nvim:
 	# create destination dirs
