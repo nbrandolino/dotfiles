@@ -6,10 +6,10 @@ This repository holds the my personal dot files for `Alacritty`, `Neovim`, `Tmux
 
 ## Install
 ```bash
-    cd ./dotfiles
+cd ./dotfiles
 ```
 ```bash
-    make install
+make install
 ```
     $ make alacritty
     $ make nvim
