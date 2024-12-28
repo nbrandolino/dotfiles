@@ -2,7 +2,22 @@
 
 ## About
 
-This repository holds the my personal dot files for alacritty, zsh, vim, and neovim.
+This repository holds the my personal dot files for `Alacritty`, `Neovim`, `Tmux`, `Zsh`, and `Vim`. It contains a makefile for easy install.
+
+Install
+-------
+    $ cd ./dotfiles
+    $ make alacritty
+    $ make nvim
+    $ make tmux
+    $ make zsh
+    $ make vim
+
+
+Uninstall
+---------
+    $ cd ./dotfiles
+    $ make uninstall
 
 
 ## License
