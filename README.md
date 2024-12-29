@@ -21,7 +21,7 @@ Install Individually
 
 Uninstall
 ---------
-```sh
+```bash
 $ cd ./dotfiles
 $ make uninstall
 ```
