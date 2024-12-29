@@ -21,8 +21,10 @@ Install Individually
 
 Uninstall
 ---------
+```sh
     $ cd ./dotfiles
     $ make uninstall
+```
 
 ## License
 
