@@ -32,6 +32,7 @@ install:
 	@sudo chsh -s /usr/bin/zsh $USER
 
 laptop:
+	# only here because i use different alacritty resolutions on my desktop and laptop lol
 	# create destination dirs
 	@mkdir -p $(ALACRITTYDEST)
 	@mkdir -p $(NVIMDEST)
