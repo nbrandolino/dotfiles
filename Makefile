@@ -1,20 +1,23 @@
 ALACRITTYDEST = ~/.config/alacritty/
+BTOPDEST = ~/.config/btop/
 NVIMDEST = ~/.config/nvim/
 TMUXDEST = ~/.config/tmux/
 VIMDEST = ~/.vimrc
 ZSHDEST = ~/.zshrc
 
 all:
-	@echo Run \'make install\', \'make alacritty\', \'make nvim\', \'make tmux\', \'make vim\', or \'make zsh\' to install dotfiles.
+	@echo Run \'make install\', \'make alacritty\', \'make btop\', \'make nvim\', \'make tmux\', \'make vim\', or \'make zsh\' to install dotfiles.
 
 install:
 	# create destination dirs
 	@mkdir -p $(ALACRITTYDEST)
 	@mkdir -p $(NVIMDEST)
 	@mkdir -p $(TMUXDEST)
+	@mkdir -p $(BTOPDEST)
 
 	# copy files
 	@cp -p ./alacritty/alacrittyDesktop.toml $(ALACRITTYDEST)alacritty.toml
+	@cp -p ./btop/* $(BTOPDEST)
 	@cp -p ./nvim/* $(NVIMDEST)
 	@cp -p ./tmux/* $(TMUXDEST)
 	@cp -p ./vim/vimrc $(VIMDEST)
@@ -33,9 +36,11 @@ laptop:
 	@mkdir -p $(ALACRITTYDEST)
 	@mkdir -p $(NVIMDEST)
 	@mkdir -p $(TMUXDEST)
+	@mkdir -p $(BTOPDEST)
 
 	# copy files
 	@cp -p ./alacritty/alacrittyLaptop.toml $(ALACRITTYDEST)alacritty.toml
+	@cp -p ./btop/* $(BTOPDEST)
 	@cp -p ./nvim/* $(NVIMDEST)
 	@cp -p ./tmux/* $(TMUXDEST)
 	@cp -p ./vim/vimrc $(VIMDEST)
