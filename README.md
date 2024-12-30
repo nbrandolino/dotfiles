@@ -30,6 +30,9 @@ $ cd ./dotfiles
 $ make uninstall
 ```
 
+## Disclaimer
+Using the Makefile will overwrite all of the dotfiles for these applications. Use with caution.
+
 ## License
 
     This program is free software; you can redistribute it and/or modify
