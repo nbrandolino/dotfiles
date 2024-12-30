@@ -3,6 +3,7 @@ BTOPDEST = ~/.config/btop/
 NVIMDEST = ~/.config/nvim/
 TMUXDEST = ~/.config/tmux/
 VIMDEST = ~/.vimrc
+VIMDESTROOT = /root/.vimrc
 ZSHDEST = ~/.zshrc
 
 all:
@@ -21,6 +22,7 @@ install:
 	@cp -p ./nvim/* $(NVIMDEST)
 	@cp -p ./tmux/* $(TMUXDEST)
 	@cp -p ./vim/vimrc $(VIMDEST)
+	@sudo cp -p ./vim/vimrc $(VIMDESTROOT)
 	@cp -p ./zsh/zshrc $(ZSHDEST)
 
 	# install ohmyzsh
@@ -45,6 +47,7 @@ laptop:
 	@cp -p ./nvim/* $(NVIMDEST)
 	@cp -p ./tmux/* $(TMUXDEST)
 	@cp -p ./vim/vimrc $(VIMDEST)
+	@sudo cp -p ./vim/vimrc $(VIMDESTROOT)
 	@cp -p ./zsh/zshrc $(ZSHDEST)
 
 	# install ohmyzsh
@@ -79,6 +82,7 @@ tmux:
 vim:
 	# copy files
 	@cp -p ./vim/vimrc $(VIMDEST)
+	@sudo cp -p ./vim/vimrc $(VIMDESTROOT)
 
 zsh:
 	# copy files
