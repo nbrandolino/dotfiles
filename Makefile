@@ -65,6 +65,13 @@ alacritty:
 	# copy files
 	@cp -p ./alacritty/alacrittyDesktop.toml $(ALACRITTYDEST)alacritty.toml
 
+btop:
+	# create destination dirs
+	@mkdir -p $(BTOPDEST)
+
+	# copy files
+	@cp -p ./btop/* $(BTOPDEST)
+
 nvim:
 	# create destination dirs
 	@mkdir -p $(NVIMDEST)
