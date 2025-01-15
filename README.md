@@ -1,33 +1,50 @@
 # Dot Files
+This repository holds the my personal dot files for `Alacritty`, `Btop`, `Neovim`, `Tmux`, `Vim`, and `Zsh`. It contains a makefile for easy install.
 
-## About
-
-This repository holds the my personal dot files for `Alacritty`, `Btop`, `Neovim`, `Tmux`, `Zsh`, and `Vim`. It contains a makefile for easy install.
-
-Install All
------------
+## Install All
 ```bash
-$ cd ./dotfiles
-$ make install
+cd ./dotfiles
+```
+```bash
+make install
 ```
 
-Install Individually
---------------------
+## Install Individually
+To install Individually, use the following commands:
 ```bash
-$ cd ./dotfiles
-$ make alacritty
-$ make btop
-$ make nvim
-$ make tmux
-$ make zsh
-$ make vim
+cd ./dotfiles
 ```
+1. **Alacritty**:
+    ```bash
+    make alacritty
+    ```
+2. **Btop**:
+    ```bash
+    make btop
+    ```
+3. **Neovim**:
+    ```bash
+    make nvim
+    ```
+4. **Tmux**:
+    ```bash
+    make tmux
+    ```
+5. **Vim**:
+    ```bash
+    make vim
+    ```
+6. **Zsh**:
+    ```bash
+    make zsh
+    ```
 
-Uninstall
----------
+## Uninstall
 ```bash
-$ cd ./dotfiles
-$ make uninstall
+cd ./dotfiles
+```
+```bash
+make uninstall
 ```
 
 ## Disclaimer
