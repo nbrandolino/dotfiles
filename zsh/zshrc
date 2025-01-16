@@ -20,5 +20,7 @@ source $ZSH/oh-my-zsh.sh
 _fix_cursor() {
    echo -ne '\e[5 q'
 }
-
 precmd_functions+=(_fix_cursor)
+
+# add cargo to path
+export PATH="$HOME/.cargo/bin:$PATH"
