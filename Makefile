@@ -5,6 +5,7 @@ TMUXDEST = ~/.config/tmux/
 VIMDEST = ~/.vimrc
 VIMDESTROOT = /root/.vimrc
 ZSHDEST = ~/.zshrc
+ZSHTHEMEDEST = ~/.oh-my-zsh/themes/
 
 all:
 	@echo Run \'make install\', \'make alacritty\', \'make btop\', \'make nvim\', \'make tmux\', \'make vim\', or \'make zsh\' to install dotfiles.
@@ -31,6 +32,7 @@ install:
 	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 	@git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 	@cp -p ./files/zsh/zshrc $(ZSHDEST)
+	@cp -p ./files/zsh/themes/* $(ZSHTHEMEDEST)
 	@sudo chsh -s /usr/bin/zsh $USER
 
 laptop:
@@ -56,6 +58,7 @@ laptop:
 	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 	@git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 	@cp -p ./files/zsh/zshrc $(ZSHDEST)
+	@cp -p ./files/zsh/themes/* $(ZSHTHEMEDEST)
 	@sudo chsh -s /usr/bin/zsh $USER
 
 alacritty:
@@ -99,6 +102,7 @@ zsh:
 	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 	@git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 	@cp -p ./files/zsh/zshrc $(ZSHDEST)
+	@cp -p ./files/zsh/themes/* $(ZSHTHEMEDEST)
 	@sudo chsh -s /usr/bin/zsh $USER
 
 uninstall:
