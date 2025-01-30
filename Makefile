@@ -18,7 +18,7 @@ install:
 	@mkdir -p $(BTOPDEST)
 
 	# copy files
-	@cp -pr ./files/alacritty/alacrittyDesktop.toml $(ALACRITTYDEST)alacritty.toml
+	@cp -pr ./files/alacritty/alacritty.toml $(ALACRITTYDEST)alacritty.toml
 	@cp -pr ./files/btop/* $(BTOPDEST)
 	@cp -pr ./files/nvim/* $(NVIMDEST)
 	@cp -pr ./files/tmux/* $(TMUXDEST)
@@ -34,39 +34,12 @@ install:
 	@cp -pr ./files/zsh/zshrc $(ZSHDEST)
 	@cp -pr ./files/zsh/themes/* $(ZSHTHEMEDEST)
 	@sudo chsh -s /usr/bin/zsh $USER
-
-laptop:
-	# only here because i use different alacritty resolutions on my desktop and laptop lol
-	# create destination dirs
-	@mkdir -p $(ALACRITTYDEST)
-	@mkdir -p $(NVIMDEST)
-	@mkdir -p $(TMUXDEST)
-	@mkdir -p $(BTOPDEST)
-
-	# copy files
-	@cp -pr ./files/alacritty/alacrittyLaptop.toml $(ALACRITTYDEST)alacritty.toml
-	@cp -pr ./files/btop/* $(BTOPDEST)
-	@cp -pr ./files/nvim/* $(NVIMDEST)
-	@cp -pr ./files/tmux/* $(TMUXDEST)
-	@cp -pr ./files/vim/vimrc $(VIMDEST)
-	@sudo cp -pr ./files/vim/vimrc $(VIMDESTROOT)
-
-	# install ohmyzsh
-	@git clone https://github.com/ohmyzsh/ohmyzsh.git ~/Desktop/ohmyzsh
-	@bash ~/Desktop/ohmyzsh/tools/install.sh --unattended
-	@git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-	@git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-	@cp -pr ./files/zsh/zshrc $(ZSHDEST)
-	@cp -pr ./files/zsh/themes/* $(ZSHTHEMEDEST)
-	@sudo chsh -s /usr/bin/zsh $USER
-
 alacritty:
 	# create destination dirs
 	@mkdir -p $(ALACRITTYDEST)
 
 	# copy files
-	@cp -pr ./files/alacritty/alacrittyDesktop.toml $(ALACRITTYDEST)alacritty.toml
+	@cp -pr ./files/alacritty/alacritty.toml $(ALACRITTYDEST)alacritty.toml
 
 btop:
 	# create destination dirs
