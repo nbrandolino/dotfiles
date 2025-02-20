@@ -79,7 +79,7 @@ zsh:
 	@git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
 	@cp -pr ./files/zsh/zshrc $(ZSH_DEST)
 	@cp -pr ./files/zsh/themes/* $(ZSH_THEME_DEST)
-	@sudo chsh -s /usr/bin/zsh $USER
+	@sudo chsh -s /usr/bin/zsh $(shell whoami)
 
 uninstall:
 	@rm -rf $(ALACRITTY_DEST)
