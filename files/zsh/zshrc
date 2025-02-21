@@ -24,3 +24,6 @@ precmd_functions+=(_fix_cursor)
 
 # add cargo to path
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# alias
+alias agent-start="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/id_ed25519"
