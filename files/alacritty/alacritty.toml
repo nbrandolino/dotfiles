@@ -30,11 +30,11 @@ style = "Beam"
 size = 11.0
 
 [font.bold]
-family = "Source Code Pro"
+family = "FiraCode Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "Source Code Pro"
+family = "FiraCode Nerd Font"
 style = "Bold Italic"
 
 [font.glyph_offset]
@@ -42,11 +42,11 @@ x = 0
 y = 0
 
 [font.italic]
-family = "Source Code Pro"
+family = "FiraCode Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "Source Code Pro"
+family = "FiraCode Nerd Font"
 style = "Regular"
 
 [font.offset]
