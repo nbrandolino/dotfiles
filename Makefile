@@ -1,7 +1,7 @@
 ALACRITTY_SRC = ./files/alacritty/alacritty.toml
-ALACRITTY_DEST = ~/.config/alacritty/alacritty.toml
+ALACRITTY_DEST = ~/.config/alacritty/
 BTOP_SRC = ./files/btop/btop.conf
-BTOP_DEST = ~/.config/btop/btop.conf
+BTOP_DEST = ~/.config/btop/
 NVIM_SRC = ./files/nvim/*
 NVIM_DEST = ~/.config/nvim/
 TMUX_SRC = ./files/tmux/*
