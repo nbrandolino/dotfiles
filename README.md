@@ -52,7 +52,7 @@ cd ./dotfiles
 Using the Makefile will overwrite all of the dotfiles for these applications. Use with caution.
 
 ## License
-This tool is licensed under the GNU General Public License (GPL). See ./LICENSE for more details.
+This tool is licensed under the GNU General Public License (GPL). See the `LICENSE` file for more details.
 
 ## Contact
 - **Author**: nbrandolino
