@@ -42,12 +42,20 @@ vim:
 	@sudo cp -pr $(VIM_SRC) $(VIM_DEST_ROOT)
 
 zsh:
-	@git clone https://github.com/ohmyzsh/ohmyzsh.git /tmp/ohmyzsh
-	@bash /tmp/ohmyzsh/tools/install.sh --unattended
-	@rm -rf /tmp/ohmyzsh
-	@git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-	@git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
+	@if [ ! -d "$(HOME)/.oh-my-zsh" ]; then \
+		git clone https://github.com/ohmyzsh/ohmyzsh.git /tmp/ohmyzsh; \
+		bash /tmp/ohmyzsh/tools/install.sh --unattended; \
+		rm -rf /tmp/ohmyzsh; \
+	fi
+	@if [ ! -d "$(HOME)/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then \
+		git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions; \
+	fi
+	@if [ ! -d "$(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then \
+		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting; \
+	fi
+	@if [ ! -d "$(HOME)/.oh-my-zsh/custom/plugins/zsh-history-substring-search" ]; then \
+		git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search; \
+	fi
 	@cp -pr $(ZSH_SRC) $(ZSH_DEST)
 	@cp -pr $(ZSH_THEME_SRC) $(ZSH_THEME_DEST)
 	@sudo chsh -s $(shell which zsh) $(shell whoami)

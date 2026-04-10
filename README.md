@@ -1,5 +1,5 @@
-# Dot Files
-This repository holds the my personal dot files for `Alacritty`, `Btop`, `Neovim`, `Tmux`, `Vim`, and `Zsh`. It contains a makefile for easy install.
+# Dotfiles
+Personal dotfiles for `Alacritty`, `Btop`, `Neovim`, `Tmux`, `Vim`, and `Zsh`, with a Makefile for easy installation.
 
 ## Requirements
 - **Alacritty**
@@ -9,51 +9,45 @@ This repository holds the my personal dot files for `Alacritty`, `Btop`, `Neovim
 - **Vim**
 - **Zsh**
 
+---
+
 ## Installation
 ### Install All
-```bash
-cd ./dotfiles
-```
-```bash
-make install
-```
+1. Navigate to the project directory:
+   ```bash
+   cd dotfiles
+   ```
+2. Install:
+   ```bash
+   make install
+   ```
 
 ### Install Individually
-To install Individually, use the following commands:
-```bash
-cd ./dotfiles
-```
-1. **Alacritty**:
-    ```bash
-    make alacritty
-    ```
-2. **Btop**:
-    ```bash
-    make btop
-    ```
-3. **Neovim**:
-    ```bash
-    make nvim
-    ```
-4. **Tmux**:
-    ```bash
-    make tmux
-    ```
-5. **Vim**:
-    ```bash
-    make vim
-    ```
-6. **Zsh**:
-    ```bash
-    make zsh
-    ```
+1. Navigate to the project directory:
+   ```bash
+   cd dotfiles
+   ```
+2. Run the target for the config you want:
+
+| Target | Description |
+|---|---|
+| `make alacritty` | Install Alacritty config |
+| `make btop` | Install Btop config |
+| `make nvim` | Install Neovim config |
+| `make tmux` | Install Tmux config |
+| `make vim` | Install Vim config |
+| `make zsh` | Install Zsh config and plugins |
+
+---
 
 ## Disclaimer
-Using the Makefile will overwrite all of the dotfiles for these applications. Use with caution.
+Using the Makefile will overwrite existing dotfiles for these applications. Use with caution.
 > **Note:** This GitHub repository is a mirror of a private, self-hosted GitLab repository.
 
+---
+
 ## License
-This tool is licensed under the GNU General Public License (GPL). See the `LICENSE` file for more details.
+This project is licensed under the GNU General Public License (GPL). See the `LICENSE` file for more details.
 
 ## Contact
 - **Author**: nbrandolino
