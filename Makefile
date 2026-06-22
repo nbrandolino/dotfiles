@@ -58,4 +58,3 @@ zsh:
 	fi
 	@cp -pr $(ZSH_SRC) $(ZSH_DEST)
 	@cp -pr $(ZSH_THEME_SRC) $(ZSH_THEME_DEST)
-	@sudo chsh -s $(shell which zsh) $(shell whoami)
