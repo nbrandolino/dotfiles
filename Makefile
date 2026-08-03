@@ -11,8 +11,6 @@ VIM_DEST = ~/.vimrc
 VIM_DEST_ROOT = /root/.vimrc
 ZSH_SRC = ./files/zsh/zshrc
 ZSH_DEST = ~/.zshrc
-ZSH_THEME_SRC = ./files/zsh/themes/*
-ZSH_THEME_DEST = ~/.oh-my-zsh/themes/
 
 .PHONY: all install alacritty btop nvim tmux vim zsh
 
@@ -57,4 +55,3 @@ zsh:
 		git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search; \
 	fi
 	@cp -pr $(ZSH_SRC) $(ZSH_DEST)
-	@cp -pr $(ZSH_THEME_SRC) $(ZSH_THEME_DEST)
