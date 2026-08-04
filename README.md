@@ -4,11 +4,12 @@ Personal dotfiles for `Alacritty`, `Btop`, `Neovim`, `Tmux`, `Vim`, and `Zsh`, w
 ## Requirements
 - **Alacritty**
 - **Btop**
-- **Neovim** (0.11+, plus `git` and a C compiler for treesitter parsers)
+- **Neovim** (0.11+, plus a C compiler for treesitter parsers)
 - **Tmux**
 - **Vim**
 - **Zsh**
-- A **Nerd Font** for icons and status line glyphs
+- **Git** and **curl**, used to clone the Neovim, Tmux, and Zsh plugins
+- **FiraCode Nerd Font**, or another Nerd Font set in `alacritty.toml`
 
 ---
 
@@ -36,8 +37,11 @@ Personal dotfiles for `Alacritty`, `Btop`, `Neovim`, `Tmux`, `Vim`, and `Zsh`, w
 | `make btop` | Install Btop config |
 | `make nvim` | Install Neovim config |
 | `make tmux` | Install Tmux config and plugins |
-| `make vim` | Install Vim config |
-| `make zsh` | Install Zsh config and plugins |
+| `make vim` | Install Vim config for the current user and for root |
+| `make zsh` | Install Zsh config, Oh My Zsh, and plugins |
+
+> **Note:** `make vim` uses `sudo` to also write `/root/.vimrc`, so both it and `make install`
+> will prompt for a password.
 
 ---
 
@@ -55,9 +59,6 @@ nvim +TSUpdate +qa                                  # neovim treesitter parsers
 ~/.config/tmux/plugins/tpm/bin/update_plugins all   # tmux
 omz update                                          # zsh
 ```
-
-> **Note:** `make nvim` also removes the plugin directory from the old `packer.nvim` setup, since
-> plugins left there would otherwise still load and shadow the `lazy.nvim` ones.
 
 ---
 
