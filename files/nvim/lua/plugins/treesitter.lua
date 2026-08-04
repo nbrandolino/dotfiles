@@ -1,4 +1,3 @@
--- syntax highlighting and indentation (replaces vim-polyglot)
 return {
     'nvim-treesitter/nvim-treesitter',
     branch = 'master',

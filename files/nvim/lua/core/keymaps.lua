@@ -15,6 +15,3 @@ map('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
 map('n', '<leader>sv', '<C-w>v', { desc = 'Split window vertically' })
 map('n', '<leader>ss', '<C-w>s', { desc = 'Split window horizontally' })
 map('n', '<leader>sx', '<cmd>close<CR>', { desc = 'Close current split' })
-
--- <C-h/j/k/l> window navigation comes from vim-tmux-navigator
--- gc / gcc commenting is built into neovim 0.10+, no plugin needed

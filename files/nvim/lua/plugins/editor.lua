@@ -12,7 +12,6 @@ return {
         opts = {
             filetypes = { '*', '!lazy' },
             options = {
-                -- css preset: names, hex, rgb, hsl, oklch, css_var
                 parsers = { css = true },
             },
         },
@@ -28,11 +27,13 @@ return {
             'TmuxNavigatePrevious',
             'TmuxNavigatorProcessList',
         },
+        init = function()
+            vim.g.tmux_navigator_no_mappings = 1
+        end,
         keys = {
-            { '<C-h>', '<cmd>TmuxNavigateLeft<CR>', desc = 'Navigate left' },
-            { '<C-j>', '<cmd>TmuxNavigateDown<CR>', desc = 'Navigate down' },
-            { '<C-k>', '<cmd>TmuxNavigateUp<CR>', desc = 'Navigate up' },
-            { '<C-l>', '<cmd>TmuxNavigateRight<CR>', desc = 'Navigate right' },
+            { '<C-h>', '<cmd>TmuxNavigateLeft<CR>', mode = { 'n', 't' }, desc = 'Navigate left' },
+            { '<C-j>', '<cmd>TmuxNavigateDown<CR>', mode = { 'n', 't' }, desc = 'Navigate down' },
+            { '<C-k>', '<cmd>TmuxNavigateUp<CR>', mode = { 'n', 't' }, desc = 'Navigate up' },
         },
     },
 }

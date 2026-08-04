@@ -1,4 +1,3 @@
--- status line (replaces vim-airline + vim-airline-themes)
 return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
