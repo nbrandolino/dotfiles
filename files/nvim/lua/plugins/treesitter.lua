@@ -1,7 +1,6 @@
 -- syntax highlighting and indentation (replaces vim-polyglot)
 return {
     'nvim-treesitter/nvim-treesitter',
-    -- the `main` branch rewrite requires neovim 0.12+, so pin master until then
     branch = 'master',
     lazy = false,
     build = ':TSUpdate',
@@ -36,7 +35,6 @@ return {
             'vimdoc',
             'yaml',
         },
-        -- needs the tree-sitter CLI, which isn't a dependency here; use :TSInstall <lang>
         auto_install = false,
         highlight = {
             enable = true,

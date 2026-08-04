@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     spec = { { import = 'plugins' } },
-    install = { colorscheme = { 'edge', 'habamax' } },
+    install = { colorscheme = { 'gruvbox-material', 'habamax' } },
     checker = { enabled = true, notify = false },
     change_detection = { notify = false },
     rocks = { enabled = false },

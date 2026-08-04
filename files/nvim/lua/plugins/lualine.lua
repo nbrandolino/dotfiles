@@ -5,9 +5,8 @@ return {
     event = 'VeryLazy',
     opts = {
         options = {
-            theme = 'edge',
+            theme = 'gruvbox-material',
             globalstatus = true,
-            -- powerline separators, matching the old airline_powerline_fonts=1
             section_separators = { left = '', right = '' },
             component_separators = { left = '', right = '' },
             disabled_filetypes = { statusline = { 'NvimTree', 'aerial' } },

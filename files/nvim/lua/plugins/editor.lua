@@ -1,12 +1,10 @@
 return {
-    -- automatically pair () {} etc
     {
         'windwp/nvim-autopairs',
         event = 'InsertEnter',
         opts = {},
     },
 
-    -- color name/hex highlighter (replaces ap/vim-css-color)
     {
         'catgoose/nvim-colorizer.lua',
         event = { 'BufReadPre', 'BufNewFile' },
@@ -20,8 +18,6 @@ return {
         },
     },
 
-    -- navigate tmux panes and nvim splits with the same <C-h/j/k/l>
-    -- note: this also needs the tmux side installed (christoomey/vim-tmux-navigator via tpm)
     {
         'christoomey/vim-tmux-navigator',
         cmd = {

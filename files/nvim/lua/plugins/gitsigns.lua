@@ -1,5 +1,3 @@
--- git gutter signs, hunk staging and blame
--- this was installed before but never set up, so it did nothing
 return {
     'lewis6991/gitsigns.nvim',
     event = { 'BufReadPre', 'BufNewFile' },

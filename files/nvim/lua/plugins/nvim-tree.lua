@@ -1,4 +1,3 @@
--- file explorer (replaces nerdtree + nerdtree-git-plugin)
 return {
     'nvim-tree/nvim-tree.lua',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -8,12 +7,9 @@ return {
         { '<leader>f', '<cmd>NvimTreeFindFile<CR>', desc = 'Find current file in explorer' },
     },
     init = function()
-        -- must be disabled before the plugin loads
         vim.g.loaded_netrw = 1
         vim.g.loaded_netrwPlugin = 1
 
-        -- the old config opened nerdtree on every VimEnter, which also fired for
-        -- `git commit`, piped stdin and `nvim <file>`. only auto-open on a bare `nvim`.
         vim.api.nvim_create_autocmd('VimEnter', {
             group = vim.api.nvim_create_augroup('nvim_tree_autoopen', { clear = true }),
             callback = function(args)

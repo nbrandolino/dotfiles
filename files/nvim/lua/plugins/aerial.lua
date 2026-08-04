@@ -1,8 +1,5 @@
--- symbol outline (replaces tagbar, keeps the <F8> binding)
--- backed by treesitter, so it no longer needs an external ctags binary
 return {
     'stevearc/aerial.nvim',
-    -- master requires neovim 0.12+ despite what its README says; use the 0.11 branch
     branch = 'nvim-0.11',
     dependencies = {
         'nvim-treesitter/nvim-treesitter',

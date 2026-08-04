@@ -1,5 +1,3 @@
--- buffer tab bar
--- alt-h/alt-l are taken by tmux (M-H/M-L switch windows), so buffers use alt-,/alt-.
 return {
     'romgrk/barbar.nvim',
     version = '^1.0.0',
@@ -14,9 +12,6 @@ return {
     opts = {
         animation = false,
         clickable = true,
-        -- keep the tab bar clear of the file explorer.
-        -- do not add aerial here: barbar caches the sidebar window id and closing
-        -- aerial leaves it stale, which then errors on every subsequent buffer open.
         sidebar_filetypes = {
             NvimTree = true,
         },
