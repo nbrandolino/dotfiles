@@ -4,10 +4,11 @@ Personal dotfiles for `Alacritty`, `Btop`, `Neovim`, `Tmux`, `Vim`, and `Zsh`, w
 ## Requirements
 - **Alacritty**
 - **Btop**
-- **Neovim**
+- **Neovim** (0.11+, plus `git` and a C compiler for treesitter parsers)
 - **Tmux**
 - **Vim**
 - **Zsh**
+- A **Nerd Font** for icons and status line glyphs
 
 ---
 
@@ -41,13 +42,22 @@ Personal dotfiles for `Alacritty`, `Btop`, `Neovim`, `Tmux`, `Vim`, and `Zsh`, w
 ---
 
 ## Plugins
-Tmux and Zsh plugins are cloned from upstream at install time rather than committed to this repository.
+Neovim, Tmux, and Zsh plugins are cloned from upstream rather than committed to this repository.
+
+Neovim uses [lazy.nvim](https://github.com/folke/lazy.nvim), which bootstraps itself and installs
+everything on first launch. Treesitter parsers compile in the background, so the first start of a
+new install takes a moment.
 
 Update them with:
 ```bash
+nvim +Lazy! sync +qa                                # neovim plugins
+nvim +TSUpdate +qa                                  # neovim treesitter parsers
 ~/.config/tmux/plugins/tpm/bin/update_plugins all   # tmux
 omz update                                          # zsh
 ```
+
+> **Note:** `make nvim` also removes the plugin directory from the old `packer.nvim` setup, since
+> plugins left there would otherwise still load and shadow the `lazy.nvim` ones.
 
 ---
 

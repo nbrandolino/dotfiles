@@ -4,6 +4,8 @@ BTOP_SRC = ./files/btop/btop.conf
 BTOP_DEST = ~/.config/btop/
 NVIM_SRC = ./files/nvim/*
 NVIM_DEST = ~/.config/nvim/
+# leftover from the old packer.nvim setup; plugins here shadow the lazy.nvim ones
+PACKER_DEST = $(HOME)/.local/share/nvim/site/pack/packer
 TMUX_SRC = ./files/tmux/tmux.conf
 TMUX_DEST = ~/.config/tmux/
 TPM_DEST = $(HOME)/.config/tmux/plugins/tpm
@@ -30,6 +32,8 @@ btop:
 
 nvim:
 	@mkdir -p $(NVIM_DEST)
+	@rm -rf $(NVIM_DEST)init.lua $(NVIM_DEST)lua
+	@rm -rf $(PACKER_DEST)
 	@cp -pr $(NVIM_SRC) $(NVIM_DEST)
 
 tmux:
