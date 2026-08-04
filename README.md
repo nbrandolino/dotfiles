@@ -34,9 +34,20 @@ Personal dotfiles for `Alacritty`, `Btop`, `Neovim`, `Tmux`, `Vim`, and `Zsh`, w
 | `make alacritty` | Install Alacritty config |
 | `make btop` | Install Btop config |
 | `make nvim` | Install Neovim config |
-| `make tmux` | Install Tmux config |
+| `make tmux` | Install Tmux config and plugins |
 | `make vim` | Install Vim config |
 | `make zsh` | Install Zsh config and plugins |
+
+---
+
+## Plugins
+Tmux and Zsh plugins are cloned from upstream at install time rather than committed to this repository.
+
+Update them with:
+```bash
+~/.config/tmux/plugins/tpm/bin/update_plugins all   # tmux
+omz update                                          # zsh
+```
 
 ---
 

@@ -4,8 +4,9 @@ BTOP_SRC = ./files/btop/btop.conf
 BTOP_DEST = ~/.config/btop/
 NVIM_SRC = ./files/nvim/*
 NVIM_DEST = ~/.config/nvim/
-TMUX_SRC = ./files/tmux/*
+TMUX_SRC = ./files/tmux/tmux.conf
 TMUX_DEST = ~/.config/tmux/
+TPM_DEST = $(HOME)/.config/tmux/plugins/tpm
 VIM_SRC = ./files/vim/vimrc
 VIM_DEST = ~/.vimrc
 VIM_DEST_ROOT = /root/.vimrc
@@ -34,6 +35,11 @@ nvim:
 tmux:
 	@mkdir -p $(TMUX_DEST)
 	@cp -pr $(TMUX_SRC) $(TMUX_DEST)
+	@if [ ! -d "$(TPM_DEST)/.git" ]; then \
+		rm -rf $(TPM_DEST); \
+		git clone https://github.com/tmux-plugins/tpm $(TPM_DEST); \
+	fi
+	@$(TPM_DEST)/bin/install_plugins
 
 vim:
 	@cp -pr $(VIM_SRC) $(VIM_DEST)
